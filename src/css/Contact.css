@@ -1,4 +1,4 @@
-/* Contact.css */
+/* Contact Container */
 .contact-container {
     padding: 20px;
     padding-bottom: 40px; /* Add padding to prevent overlap with footer */
@@ -12,6 +12,7 @@
     margin-bottom: 20px;
 }
 
+/* Contact Card */
 .contact-card {
     display: flex;
     flex-wrap: wrap;
@@ -22,8 +23,10 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
     overflow: hidden;
+    background-color: #fff;
 }
 
+/* Map and Info Sections */
 .map-section, .info-section {
     flex: 1;
     min-width: 300px;
@@ -56,4 +59,36 @@
     margin-bottom: 10px;
 }
 
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .contact-card {
+        flex-direction: column; /* Stack the map and info sections */
+        text-align: center;
+    }
 
+    .contact-heading {
+        font-size: 24px;
+    }
+
+    .info-heading {
+        font-size: 20px;
+    }
+
+    .address, .contact-details {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-heading {
+        font-size: 22px;
+    }
+
+    .info-heading {
+        font-size: 18px;
+    }
+
+    .address, .contact-details {
+        font-size: 14px;
+    }
+}
