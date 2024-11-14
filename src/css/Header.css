@@ -1,37 +1,77 @@
+/* Header Styling */
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 30px;
-    background-color: #4CAF50;
-    color: #fff;
-  }
-  
-  .header-logo {
-    display: flex;
-    align-items: center;
-     }
-  
-  .logo {
-    height: 40px;
-    width: auto;
-    margin-right: 10px;
-    border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #4CAF50;
+  color: #fff;
+  font-family: Arial, sans-serif;
+}
 
+.header-logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 40px;
+  width: auto;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+
+.company-name {
+  font-size: 1.5rem;
+  white-space: nowrap;
+}
+
+.nav {
+  display: flex;
+  gap: 15px;
+}
+
+.nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.nav a:hover {
+  color: #e0e0e0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    padding: 10px;
+    text-align: center;
   }
-  
+
   .company-name {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+    margin-top: 5px;
   }
-  
+
+  .nav {
+    flex-direction: column;
+    margin-top: 10px;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    height: 35px;
+  }
+
+  .company-name {
+    font-size: 1.1rem;
+  }
+
   .nav a {
-    margin: 0 15px;
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
+    font-size: 0.9rem;
   }
-  
-  .nav a:hover {
-    text-decoration: underline;
-  }
-  
+}
