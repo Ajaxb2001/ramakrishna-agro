@@ -50,7 +50,7 @@ const ProductList = () => {
     { id: 22, name: "Pittashamak", description: "Herbal blend for acidity relief.", price: "₹70", image: Pittashamak },
     { id: 23, name: "Pure Dhoop", description: "Chemical-free dhoop for spiritual ambiance.", price: "₹25", image: PureDhoop },
     { id: 24, name: "Shampoo", description: "Herbal shampoo for smooth hair.", price: "₹80", image: Shampoo },
-    { id: 25, name: "Shen-Gowrya", description: "Traditional face powder for natural glow.", price: "₹35", image: ShenGowrya },
+    { id: 25, name: "Agnihotri-Sheni", description: "Traditional face powder for natural glow.", price: "₹35", image: ShenGowrya },
     { id: 26, name: "Tulsi Powder", description: "Holy basil powder for health and wellness.", price: "₹50", image: Tulsipowder },
     { id: 27, name: "Vednashamak Oil", description: "Herbal oil for pain relief.", price: "₹110", image: Vednashamakoil },
     
@@ -78,31 +78,39 @@ const ProductList = () => {
   };
 
   return (
-    <div className="product-list">
-  <h1>Ramakrishna Agro Products <span role="img" aria-label="leaf">🌿</span></h1>
-  <p>Explore our range of natural, chemical-free agro products. <span role="img" aria-label="nature">🍃</span></p>
-  <div className="products-container">
+    <div>
+<div className="parallax">
+  <div className="parallax-content">
+    <h1 className="parallax-heading">Ramakrishna Agro Products 🌿</h1>
+    <p className="parallax-description">Explore our range of natural, chemical-free agro products. 🍃</p>
+  </div>
+</div>
 
-        {currentProducts.map((product) => (
-          <div key={product.id} className="product-card">
-            <img 
-              src={product.image} 
-              alt={product.name} 
-              className="product-image" 
-              loading="lazy" // Enable lazy loading
-            />
-            <h2 className="product-name">{product.name}</h2>
-            <p className="product-description">{product.description}</p>
-            <p className="product-price">{product.price}</p>
-          </div>
-        ))}
-      </div>
-      <div className="pagination">
-        {currentPage > 1 && <button onClick={prevPage}>Previous</button>}
-        {indexOfLastProduct < products.length && <button onClick={nextPage}>Next</button>}
+  
+      {/* Product List */}
+      <div className="product-list">
+        <div className="products-container">
+          {currentProducts.map((product) => (
+            <div key={product.id} className="product-card">
+              <img
+                src={product.image}
+                alt={product.name}
+                className="product-image"
+                loading="lazy" // Enable lazy loading
+              />
+              <h2 className="product-name">{product.name}</h2>
+              <p className="product-description">{product.description}</p>
+              <p className="product-price">{product.price}</p>
+            </div>
+          ))}
+        </div>
+        <div className="pagination">
+          {currentPage > 1 && <button onClick={prevPage}>Previous</button>}
+          {indexOfLastProduct < products.length && <button onClick={nextPage}>Next</button>}
+        </div>
       </div>
     </div>
-  );
+  );  
 };
 
 export default ProductList;

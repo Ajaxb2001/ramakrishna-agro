@@ -1,175 +1,268 @@
 /* General Styles for the Product List */
-.product-list {
-    text-align: center;
-    padding: 20px;
-    font-family: Arial, sans-serif;
-  }
-  
+/* Parallax Section */
+.parallax {
+  position: relative;
+  height: 300px; /* Adjust height as needed */
+  background-image: url('../assets/A-veges.jpg'); /* Replace with your image */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff; /* White text for contrast */
+}
+
+.parallax-heading {
+  font-size: 3rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  margin: 0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8); /* Shadow for better readability */
+}
+
+.parallax-description {
+  font-size: 1.2rem;
+  margin: 10px 0;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.7); /* Subtle shadow */
+}
+
+.products-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  justify-content: center;
+}
+
+.product-card {
+  width: 200px;
+  padding: 15px;
+  margin: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  background-color: #fff; /* Default card background */
+  position: relative;
+  overflow: hidden;
+}
+
+.product-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, rgba(40, 167, 69, 0.2), rgba(72, 201, 176, 0.2));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+}
+
+.product-card:hover {
+  transform: translateY(-10px); /* Lift the card */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Stronger shadow */
+  background-color: #f9f9f9;
+}
+
+.product-card:hover::before {
+  opacity: 1; /* Show background effect on hover */
+}
+
+.product-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Product Name */
+.product-name {
+  font-size: 18px;
+  margin: 10px 0;
+  font-weight: bold;
+  color: #333;
+  font-family: 'Poppins', sans-serif; /* Modern and clean font */
+  text-transform: uppercase; /* Optional: Make the name uppercase for emphasis */
+}
+
+/* Product Description */
+.product-description {
+  font-size: 14px;
+  color: #666;
+  margin: 10px 0;
+  font-family: 'Roboto', sans-serif; /* Simple and legible font */
+  font-style: italic; /* Optional: Add a subtle italic style */
+  line-height: 1.5; /* Improve readability with spacing between lines */
+}
+
+/* Product Price */
+.product-price {
+  font-size: 16px;
+  font-weight: bold;
+  color: #28a745; /* Green text for price */
+  margin-top: 10px;
+  font-family: 'Montserrat', sans-serif; /* A slightly bold and clear font */
+}
+
+
+/* Pagination Styling */
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.pagination button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #28a745; /* Green color for buttons */
+  color: white;
+  margin-bottom: 50px;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.pagination button:hover {
+  background-color: #218838; /* Darker green on hover */
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Heading and Emojis */
+.product-list h1 {
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-list p {
+  font-size: 18px;
+  color: #555;
+  text-align: center;
+  margin-top: 0;
+}
+
+.product-list span {
+  margin-left: 10px;
+  font-size: 28px;
+  display: inline-block;
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 1200px) {
   .products-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  
-  .product-card {
-    width: 200px;
-    padding: 15px;
-    margin: 15px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-  }
-  
-  .product-image {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-  }
-  
-  .product-name {
-    font-size: 18px;
-    margin: 10px 0;
-  }
-  
-  .product-description {
-    font-size: 14px;
-    color: #666;
-    margin: 10px 0;
-  }
-  
-  .product-price {
-    font-size: 16px;
-    font-weight: bold;
-    color: #333;
-    margin-top: 10px;
-  }
-  
-  /* Pagination Styling */
-  .pagination {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 20px;
-  }
-  
-  .pagination button {
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    background-color: #28a745; /* Green color for buttons */
-    color: white;
-    border: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-  }
-  
-  /* Heading and Emojis */
-  .product-list h1 {
-    font-size: 36px;
-    color: #333;
-    margin-bottom: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .product-list p {
-    font-size: 18px;
-    color: #555;
-    text-align: center;
-    margin-top: 0;
-  }
-  
-  .product-list span {
-    margin-left: 10px;
-    font-size: 28px;
-    display: inline-block;
-  }
-  
-  /* Responsive Design for Smaller Screens */
-  @media (max-width: 1200px) {
-    .products-container {
       grid-template-columns: repeat(3, 1fr); /* 3 products per row */
-    }
   }
-  
-  @media (max-width: 992px) {
-    .products-container {
+}
+
+@media (max-width: 992px) {
+  .products-container {
       grid-template-columns: repeat(2, 1fr); /* 2 products per row */
-    }
-  
-    .product-card {
-      width: 220px; /* Adjust card size for medium screens */
-    }
-  
-    .product-list h1 {
-      font-size: 30px; /* Adjust heading size */
-    }
-  
-    .product-list p {
-      font-size: 16px; /* Adjust paragraph font size */
-    }
-  
-    .product-list span {
-      font-size: 24px; /* Adjust emoji size */
-    }
   }
-  
-  @media (max-width: 768px) {
-    .products-container {
+
+  .product-card {
+      width: 220px; /* Adjust card size for medium screens */
+  }
+
+  .product-list h1 {
+      font-size: 30px; /* Adjust heading size */
+  }
+
+  .product-list p {
+      font-size: 16px; /* Adjust paragraph font size */
+  }
+
+  .product-list span {
+      font-size: 24px; /* Adjust emoji size */
+  }
+}
+
+@media (max-width: 768px) {
+  .products-container {
       grid-template-columns: 1fr; /* 1 product per row on small screens */
-    }
-  
-    .product-card {
+  }
+
+  .product-card {
       width: 100%; /* Make the card fill the width */
       max-width: 280px; /* Prevent cards from becoming too wide */
-    }
-  
-    .product-list h1 {
-      font-size: 28px; /* Adjust heading size */
-    }
-  
-    .product-list p {
-      font-size: 14px; /* Adjust paragraph font size */
-    }
-  
-    .product-list span {
-      font-size: 22px; /* Adjust emoji size */
-    }
   }
-  
-  @media (max-width: 480px) {
-    .products-container {
+
+  .product-list h1 {
+      font-size: 28px; /* Adjust heading size */
+  }
+
+  .product-list p {
+      font-size: 14px; /* Adjust paragraph font size */
+  }
+
+  .product-list span {
+      font-size: 22px; /* Adjust emoji size */
+  }
+}
+
+@media (max-width: 480px) {
+  .products-container {
       grid-template-columns: 1fr; /* Stack items vertically on very small screens */
       gap: 10px; /* Smaller gap between items */
-    }
-  
-    .product-card {
+  }
+
+  .product-card {
       width: 100%;
       max-width: 250px; /* Prevent too wide cards */
-    }
-  
-    .product-list h1 {
+  }
+
+  .product-list h1 {
       font-size: 24px; /* Adjust heading size */
-    }
-  
-    .product-list p {
+  }
+
+  .product-list p {
       font-size: 12px; /* Adjust paragraph font size */
-    }
-  
-    .product-list span {
+  }
+
+  .product-list span {
       font-size: 20px; /* Adjust emoji size */
-    }
-  
-    .pagination {
+  }
+
+  .pagination {
       flex-direction: column; /* Stack pagination buttons vertically */
       gap: 10px; /* Reduce gap between pagination buttons */
-    }
-  
-    .pagination button {
+  }
+
+  .pagination button {
       font-size: 14px; /* Smaller font for pagination */
       padding: 8px 15px; /* Smaller padding */
-    }
   }
-  
+}
+
+/* parallax */
+@media (max-width: 768px) {
+  .parallax-heading {
+    font-size: 2.5rem;
+  }
+
+  .parallax-description {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .parallax-heading {
+    font-size: 2rem;
+  }
+
+  .parallax-description {
+    font-size: 0.9rem;
+  }
+}
