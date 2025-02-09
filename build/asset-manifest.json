@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.5bfc2c5c.css",
-    "main.js": "/static/js/main.6680e057.js",
+    "main.css": "/static/css/main.1cdcbe72.css",
+    "main.js": "/static/js/main.2b9028db.js",
     "static/js/453.97bbc5e5.chunk.js": "/static/js/453.97bbc5e5.chunk.js",
     "static/media/Phynely.jpeg": "/static/media/Phynely.5a56b7761f186daba079.jpeg",
     "static/media/Beet Sharbat.jpeg": "/static/media/Beet Sharbat.c36d5431a74c89d0fe07.jpeg",
@@ -15,6 +15,7 @@
     "static/media/Pure Dhoop.jpeg": "/static/media/Pure Dhoop.a1398558bcd468b02bfa.jpeg",
     "static/media/Honey.jpeg": "/static/media/Honey.64f15d0429475e810be2.jpeg",
     "static/media/AmrutDhara.jpeg": "/static/media/AmrutDhara.08bae328037d6cafd7fd.jpeg",
+    "static/media/A-veges.jpg": "/static/media/A-veges.04d50962f411c5ed0c4b.jpg",
     "static/media/Facepack.jpeg": "/static/media/Facepack.70bcfed5a29b0f0a5792.jpeg",
     "static/media/Pittashanamk.jpeg": "/static/media/Pittashanamk.70a658b41ac8e8eeeff5.jpeg",
     "static/media/Dantamanjan.jpeg": "/static/media/Dantamanjan.8c05b8c2ff0a3a7b9572.jpeg",
@@ -32,12 +33,12 @@
     "static/media/Beet Jam.jpeg": "/static/media/Beet Jam.a0a47766e17e7cc1c4cb.jpeg",
     "static/media/Ghee.jpeg": "/static/media/Ghee.ae8da4e7038f60fe0665.jpeg",
     "index.html": "/index.html",
-    "main.5bfc2c5c.css.map": "/static/css/main.5bfc2c5c.css.map",
-    "main.6680e057.js.map": "/static/js/main.6680e057.js.map",
+    "main.1cdcbe72.css.map": "/static/css/main.1cdcbe72.css.map",
+    "main.2b9028db.js.map": "/static/js/main.2b9028db.js.map",
     "453.97bbc5e5.chunk.js.map": "/static/js/453.97bbc5e5.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5bfc2c5c.css",
-    "static/js/main.6680e057.js"
+    "static/css/main.1cdcbe72.css",
+    "static/js/main.2b9028db.js"
   ]
 }
