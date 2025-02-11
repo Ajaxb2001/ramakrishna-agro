@@ -7,7 +7,6 @@
   background-color: #4CAF50;
   color: #fff;
   font-family: Arial, sans-serif;
-  position: relative;
 }
 
 .header-logo {
@@ -43,23 +42,10 @@
   color: #e0e0e0;
 }
 
-.hamburger {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-}
-
-.hamburger .line {
-  width: 25px;
-  height: 3px;
-  background-color: #fff;
-  margin: 4px 0;
-}
-
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .header {
-    flex-direction: row;
+    flex-direction: column;
     padding: 10px;
     text-align: center;
   }
@@ -70,28 +56,9 @@
   }
 
   .nav {
-    position: fixed;
-    top: 0;
-    left: -100%;
-    height: 100vh;
-    width: 250px;
-    background-color: #4CAF50;
     flex-direction: column;
-    gap: 20px;
-    padding-top: 60px;
-    transition: left 0.3s ease;
-  }
-
-  .nav.open {
-    left: 0;
-  }
-
-  .hamburger {
-    display: flex;
-  }
-
-  .header-logo {
-    display: none;
+    margin-top: 10px;
+    gap: 10px;
   }
 }
 
